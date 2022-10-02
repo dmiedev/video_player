@@ -1,4 +1,4 @@
-name: video_player
+name: video_player_app
 description: Simple URL video player with capability of external casting.
 version: 1.0.0+1
 publish_to: none
@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   bloc: ^8.1.0
+  chewie: ^0.12.2
   equatable: ^2.0.5
   flutter:
     sdk: flutter

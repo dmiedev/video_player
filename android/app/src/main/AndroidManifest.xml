@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.verygoodcore.video_player">
+    package="com.example.verygoodcore.video_player_app">
    <application
         android:label="${appName}"
         android:icon="@mipmap/ic_launcher">

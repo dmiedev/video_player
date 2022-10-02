@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:video_player/app/app.dart';
-import 'package:video_player/home/home.dart';
+import 'package:video_player_app/app/app.dart';
+import 'package:video_player_app/home/home.dart';
 
 void main() {
   group('App', () {

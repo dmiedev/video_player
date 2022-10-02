@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:video_player/player/bloc/player_bloc.dart';
+import 'package:video_player_app/player/bloc/player_bloc.dart';
 
 class PlayerPage extends StatelessWidget {
   const PlayerPage({
     super.key,
     required this.videoLink,
   });
+
+  final String videoLink;
 
   static MaterialPageRoute<PlayerPage> getRoute({required String videoLink}) {
     return MaterialPageRoute(
@@ -15,8 +17,6 @@ class PlayerPage extends StatelessWidget {
       ),
     );
   }
-
-  final String videoLink;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +27,14 @@ class PlayerPage extends StatelessWidget {
   }
 }
 
-class _PlayerView extends StatelessWidget {
+class _PlayerView extends StatefulWidget {
   const _PlayerView();
 
+  @override
+  State<_PlayerView> createState() => _PlayerViewState();
+}
+
+class _PlayerViewState extends State<_PlayerView> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

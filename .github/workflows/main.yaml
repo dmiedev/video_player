@@ -1,4 +1,4 @@
-name: video_player
+name: video_player_app
 
 on: [pull_request, push]
 

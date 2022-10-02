@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:video_player/home/bloc/home_bloc.dart';
-import 'package:video_player/player/view/player_page.dart';
+import 'package:video_player_app/home/bloc/home_bloc.dart';
+import 'package:video_player_app/player/view/player_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

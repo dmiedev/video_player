@@ -1,5 +1,5 @@
-import 'package:video_player/app/app.dart';
-import 'package:video_player/bootstrap.dart';
+import 'package:video_player_app/app/app.dart';
+import 'package:video_player_app/bootstrap.dart';
 
 void main() {
   bootstrap(() => const App());
