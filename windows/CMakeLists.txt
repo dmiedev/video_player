@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(video_player LANGUAGES CXX)
+project(video_player_app LANGUAGES CXX)
 
-set(BINARY_NAME "video_player")
+set(BINARY_NAME "video_player_app")
 
 cmake_policy(SET CMP0063 NEW)
 

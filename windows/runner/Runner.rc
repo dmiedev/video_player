@@ -90,11 +90,11 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example.verygoodcore.video-player" "\0"
-            VALUE "FileDescription", "video_player" "\0"
+            VALUE "FileDescription", "video_player_app" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "video_player" "\0"
+            VALUE "InternalName", "video_player_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example.verygoodcore.video-player. All rights reserved." "\0"
-            VALUE "OriginalFilename", "video_player.exe" "\0"
+            VALUE "OriginalFilename", "video_player_app.exe" "\0"
             VALUE "ProductName", "Video Player" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END

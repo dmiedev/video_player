@@ -1,4 +1,4 @@
-package com.example.verygoodcore.video_player
+package com.example.verygoodcore.video_player_app
 
 import io.flutter.embedding.android.FlutterActivity
 
