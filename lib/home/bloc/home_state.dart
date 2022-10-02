@@ -1,5 +1,7 @@
 part of 'home_bloc.dart';
 
-abstract class HomeState {}
+class HomeState {
+  const HomeState({this.videoLink = ''});
 
-class HomeInitial extends HomeState {}
+  final String videoLink;
+}
