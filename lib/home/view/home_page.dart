@@ -31,15 +31,13 @@ class _HomeViewState extends State<_HomeView> {
     return BlocListener<HomeBloc, HomeState>(
       listener: _handleHomeStateChange,
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Video Player'),
+        ),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(
-                  'Video Player',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-                const SizedBox(height: 50),
                 SizedBox(
                   width: 350,
                   child: TextFormField(
@@ -52,7 +50,7 @@ class _HomeViewState extends State<_HomeView> {
                 ),
                 const SizedBox(height: 30),
                 FloatingActionButton.extended(
-                  label: const Text('WATCH'),
+                  label: const Text('PLAY'),
                   onPressed: _handleWatchButtonPress,
                 ),
                 const SizedBox(height: 50),

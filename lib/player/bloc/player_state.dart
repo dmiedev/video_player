@@ -1,5 +1,10 @@
 part of 'player_bloc.dart';
 
-abstract class PlayerState {}
+class PlayerState extends Equatable {
+  const PlayerState({required this.videoLink});
 
-class PlayerInitial extends PlayerState {}
+  final String videoLink;
+
+  @override
+  List<Object?> get props => [videoLink];
+}
