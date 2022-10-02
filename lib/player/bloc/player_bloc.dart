@@ -8,8 +8,6 @@ class PlayerBloc extends Bloc<PlayerEvent, PlayerState> {
   PlayerBloc({
     required String videoLink,
   }) : super(PlayerState(videoLink: videoLink)) {
-    on<PlayerEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<PlayerEvent>((event, emit) {});
   }
 }
