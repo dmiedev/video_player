@@ -1,28 +1,26 @@
 part of 'chrome_cast_bloc.dart';
 
+enum ChromeCastStatus { idle, playing, paused }
+
 class ChromeCastState extends Equatable {
   const ChromeCastState({
     this.controller,
-    this.isActive = false,
-    this.isPlaying = false,
+    this.status = ChromeCastStatus.idle,
   });
 
   final ChromeCastController? controller;
-  final bool isActive;
-  final bool isPlaying;
+  final ChromeCastStatus status;
 
   ChromeCastState copyWith({
     ChromeCastController? Function()? controller,
-    bool? isActive,
-    bool? isPlaying,
+    ChromeCastStatus? status,
   }) {
     return ChromeCastState(
       controller: controller != null ? controller() : this.controller,
-      isActive: isActive ?? this.isActive,
-      isPlaying: isPlaying ?? this.isPlaying,
+      status: status ?? this.status,
     );
   }
 
   @override
-  List<Object?> get props => [controller, isActive, isPlaying];
+  List<Object?> get props => [controller, status];
 }

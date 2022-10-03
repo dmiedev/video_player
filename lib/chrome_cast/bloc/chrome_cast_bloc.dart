@@ -21,9 +21,7 @@ class ChromeCastBloc extends Bloc<ChromeCastEvent, ChromeCastState> {
     ChromeCastInitialized event,
     Emitter<ChromeCastState> emit,
   ) async {
-    emit(
-      ChromeCastState(controller: event.controller),
-    );
+    emit(ChromeCastState(controller: event.controller));
     await state.controller!.addSessionListener();
   }
 
@@ -36,9 +34,7 @@ class ChromeCastBloc extends Bloc<ChromeCastEvent, ChromeCastState> {
     }
     await state.controller!.loadMedia(event.videoLink);
     await state.controller!.play();
-    emit(
-      state.copyWith(isActive: true, isPlaying: true),
-    );
+    emit(state.copyWith(status: ChromeCastStatus.playing));
   }
 
   Future<void> _handlePlaybackToggled(
@@ -48,14 +44,13 @@ class ChromeCastBloc extends Bloc<ChromeCastEvent, ChromeCastState> {
     if (state.controller == null) {
       return;
     }
-    if (state.isActive) {
+    if (state.status == ChromeCastStatus.playing) {
       await state.controller!.pause();
+      emit(state.copyWith(status: ChromeCastStatus.paused));
     } else {
       await state.controller!.play();
+      emit(state.copyWith(status: ChromeCastStatus.playing));
     }
-    emit(
-      state.copyWith(isPlaying: !state.isPlaying),
-    );
   }
 
   Future<void> _handleReplayed(
@@ -92,8 +87,6 @@ class ChromeCastBloc extends Bloc<ChromeCastEvent, ChromeCastState> {
       return;
     }
     await state.controller!.stop();
-    emit(
-      state.copyWith(isActive: false, isPlaying: false),
-    );
+    emit(state.copyWith(status: ChromeCastStatus.idle));
   }
 }

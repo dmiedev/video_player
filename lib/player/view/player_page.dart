@@ -92,13 +92,13 @@ class _PlayerViewState extends State<_PlayerView> {
       ),
       body: BlocBuilder<ChromeCastBloc, ChromeCastState>(
         buildWhen: (previous, current) {
-          return previous.isActive != current.isActive;
+          return previous.status != current.status;
         },
         builder: (context, state) {
-          if (state.isActive) {
+          if (state.status != ChromeCastStatus.idle) {
             return Center(
               child: CastControls(
-                paused: !state.isPlaying,
+                paused: state.status == ChromeCastStatus.paused,
                 color: Colors.white,
                 onPlayPauseButtonPressed: _handleCastPlayPauseButtonPress,
                 onForward10ButtonPressed: _handleCastForwardButtonPress,
